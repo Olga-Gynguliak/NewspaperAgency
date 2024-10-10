@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+
+    <h1>
+        <a href="{% url 'newspaper:newspaper-create' %}" class="btn btn-dark link-to-page">
+            Create article
+        </a>
+    </h1>
+        <form method="get" action="" class="form-inline">
+            {{newspaper_search_form|crispy}}
+            <input class="btn btn-secondary" type="submit" value="🔎">
+        </form>
+
+<br>
+
+{% if newspaper_list %}
+<table class="table table-primary">
+        <thead>
+            <tr>
+                <th>Topic Name</th>
+                <th>Newspaper Title</th>
+                </tr>
+        </thead>
+        <tbody>
+        {% for newspaper in newspaper_list %}
+        <tr class="table-secondary">
+            <td>{{ newspaper.topic.name }}</td>
+            <td><a href="{% url 'newspaper:newspaper-detail' pk=newspaper.id %} ">{{newspaper.title}}</a>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% else %}
+    <p>There are no Topics</p>
+{% endif %}
+{% endblock %}

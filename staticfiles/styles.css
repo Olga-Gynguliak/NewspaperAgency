@@ -1,0 +1,58 @@
+.form-inline {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.form-inline input {
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    border: 1px solid #ced4da
+}
+
+.table {
+    width: 75%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 0.5rem;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.table-primary {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.table-secondary {
+    background-color: #e2e3e5;
+}
+
+.table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.table a:hover {
+    text-decoration: underline;
+}
+
+.table-secondary td a {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .table th, .table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    }
+}

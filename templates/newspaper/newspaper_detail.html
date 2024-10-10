@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>
+        <a href="{% url 'newspaper:newspaper-delete' pk=newspaper.id %}" class="btn btn-danger link-to-page">
+            Delete
+        </a>
+
+        <a href="{% url 'newspaper:newspaper-update' pk=newspaper.id %}" class="btn btn-secondary link-to-page">
+            Update
+        </a>
+    </h1>
+    <p>Topic: {{newspaper.topic.name}}</p>
+
+    <h1>
+        {% if newspaper in user.newspapers.all %}
+            <a href="{% url 'newspaper:toggle-newspaper-assign' pk=newspaper.id %}" class="btn btn-danger link-to-page">
+                Delete me from this article
+            </a>
+        {% else %}
+            <a href="{% url 'newspaper:toggle-newspaper-assign' pk=newspaper.id %}" class="btn btn-success link-to-page">
+                Assigned for this article
+            </a>
+        {% endif %}
+    </h1>
+
+    <hr>
+
+    <ul>
+        {% for redactor in newspaper.redactors.all %}
+            <li>By {{ redactor.first_name }} {{ redactor.last_name }} (username: {{ redactor.username }})</li>
+        {% endfor %}
+    </ul>
+
+<div class="container">
+    <h1 class="mt-7 mb-5 col-md-8 text-justify">{{ newspaper.title }}</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <p class="custom-text">{{ newspaper.content }}</p>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div card-body>
+                    <p class="text-justify" style="padding:15px;"><strong>References:</strong> {{newspaper.references }}
+                    <br> {{newspaper.published_date }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>
+         <p>Topic {{ topic.name}}, please update or delete: </p>
+        <a href="{% url 'newspaper:topic-delete' pk=topic.id %}" class="btn btn-danger link-to-page">
+            Delete
+        </a>
+
+        <a href="{% url 'newspaper:topic-update' pk=topic.id %}" class="btn btn-secondary link-to-page">
+            Update
+        </a>
+    </h1>
+
+    <ul>
+        {% for topic in newspaper.topics.all %}
+            <li>By {{ topic.name }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

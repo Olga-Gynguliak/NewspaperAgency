@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="static/styles.css">
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'newspaper:index' %}">Newspaper Agency</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'newspaper:index' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'newspaper:redactor-list' %}">All authors</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'newspaper:newspaper-list' %}">All articles</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'newspaper:topic-list' %}">All topics</a>
+        </li>
+      </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <span class="navbar-text">
+                    User: <a href="{{ user.get_absolute_url }}">{{ user.get_username }}</a>
+                </span>
+            </li>
+            <li class="nav-item">
+                <form method="POST" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-link nav-link" style="padding:0;">Logout</button>
+                </form>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}?next={{request.path}}">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+  </div>
+</nav>
