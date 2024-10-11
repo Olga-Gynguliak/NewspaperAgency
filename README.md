@@ -30,7 +30,7 @@ git clone https://github.com/Olga-Gynguliak/NewspaperAgency.git
 > Password: admin1234
 
 *Article Management:*
-Create, edit, and delete articles; Categorize articles by topic; Assign author for article; Count records of newspapers, redactors, topics.
+Create, edit, and delete articles; Categorize articles by topic; Assign author for article; Count records of newspapers, publishers, topics.
 
 *Author Management:* Create new authors; Update author experience. 
 
