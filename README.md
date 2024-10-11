@@ -37,6 +37,6 @@ Create, edit, and delete articles; Categorize articles by topic; Assign author f
 *Search Functionality:* Search for author by username; Search for topic by name.
 
 ___
-Home page Newspaper Agency.
+Home page Newspaper Agency
 
 ![newspaper_agency_home.png](newspaper_agency_home.png)
