@@ -1,0 +1,63 @@
+<mxfile host="drawio-plugin" modified="2024-10-13T17:16:23.674Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="sxrgd_L3NfmWA7EBiEhO" version="22.1.22" type="embed">
+  <diagram id="G_HHuSyFxBcpwqOR03Jf" name="Page-1">
+    <mxGraphModel dx="964" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7" value="&lt;div style=&quot;background-color: rgb(255, 255, 255); color: rgb(8, 8, 8); font-size: 14px;&quot;&gt;&lt;pre style=&quot;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;title: str&lt;/font&gt;&lt;/pre&gt;&lt;pre style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Helvetica&quot;&gt;content: text&lt;/font&gt;&lt;/pre&gt;&lt;pre style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;pre style=&quot;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;published_date: date&lt;/font&gt;&lt;/pre&gt;&lt;pre style=&quot;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;topic: Topic&lt;/font&gt;&lt;/pre&gt;&lt;pre style=&quot;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;publishers: List(Redactor)&lt;/font&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="520" y="193" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Newspaper&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/pre&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="520" y="135" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="&lt;div style=&quot;background-color: rgb(255, 255, 255); color: rgb(8, 8, 8); font-size: 14px;&quot;&gt;&lt;pre style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Helvetica&quot;&gt;years_of_experience: int&lt;/font&gt;&lt;/pre&gt;&lt;pre style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Helvetica&quot;&gt;username: str&lt;/font&gt;&lt;/pre&gt;&lt;pre style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;pre style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Helvetica&quot;&gt;email: str&lt;/font&gt;&lt;/pre&gt;&lt;pre style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;pre style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Helvetica&quot;&gt;password: str&lt;/font&gt;&lt;/pre&gt;&lt;pre style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;pre style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Helvetica&quot;&gt;first_name: str&lt;/font&gt;&lt;/pre&gt;&lt;pre style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Helvetica&quot;&gt;last_name: str&lt;/font&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="180" y="363" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Redactor(AbstarctUser)&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/pre&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="180" y="323" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="1" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontFamily=Helvetica;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="320" y="175" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="n" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontFamily=Helvetica;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="490" y="275" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="o.n" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontFamily=Helvetica;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="355" y="355" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="o.n" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontFamily=Helvetica;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="475" y="355" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="63" value="Newspaper Agency" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=25;" parent="1" vertex="1">
+          <mxGeometry x="320" y="40" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="73" value="" style="endArrow=block;startArrow=block;endFill=1;startFill=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="360" y="345" as="sourcePoint" />
+            <mxPoint x="520" y="345" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="77" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=-0.015;exitY=0.668;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="195" y="175" as="sourcePoint" />
+            <mxPoint x="325" y="165" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="307" />
+              <mxPoint x="490" y="245" />
+              <mxPoint x="490" y="165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="81" value="&lt;div style=&quot;background-color: rgb(255, 255, 255); color: rgb(8, 8, 8); font-size: 14px;&quot;&gt;&lt;pre style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Helvetica&quot;&gt;name: str&lt;/font&gt;&lt;/pre&gt;&lt;pre style=&quot;&quot;&gt;&lt;br&gt;&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=12;align=left;" vertex="1" parent="1">
+          <mxGeometry x="240" y="175" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="82" value="&lt;div style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;pre style=&quot;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Topic&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/pre&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="135" width="80" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
