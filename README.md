@@ -34,7 +34,7 @@ Create, edit, and delete articles; Categorize articles by topic; Assign author f
 
 *Author Management:* Create new authors; Update author experience. 
 
-*Search Functionality:* Search for author by username; Search for topic by name.
+*Search Functionality:* Search for author by username; Search topic by name.
 
 ___
 Home page Newspaper Agency
