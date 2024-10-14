@@ -18,7 +18,7 @@ from .views import (
     TopicCreateView,
     TopicUpdateView,
     TopicDeleteView,
-    toggle_assign_to_newspaper,
+    ToggleAssignToNewspaperView
 )
 
 urlpatterns = [
@@ -74,8 +74,8 @@ urlpatterns = [
         name="newspaper-delete",
     ),
     path(
-        "newspapers/<int:pk>/toggle-assign/",
-        toggle_assign_to_newspaper,
+        "newspaper/<int:pk>/toggle-assign/",
+        ToggleAssignToNewspaperView.as_view(),
         name="toggle-newspaper-assign",
     ),
     path(

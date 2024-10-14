@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views import View
 
 from .models import Redactor, Newspaper, Topic
 from .forms import (
@@ -159,11 +160,14 @@ class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
         return super().dispatch(request, *args, **kwargs)
 
 
-@login_required
-def toggle_assign_to_newspaper(request, pk):
-    redactor = Redactor.objects.get(id=request.user.id)
-    if Newspaper.objects.get(id=pk) in redactor.newspapers.all():
-        redactor.newspapers.remove(pk)
-    else:
-        redactor.newspapers.add(pk)
-    return HttpResponseRedirect(reverse_lazy("newspaper:newspaper-detail", args=[pk]))
+class ToggleAssignToNewspaperView(LoginRequiredMixin, View):
+    def post(self, request, pk, *args, **kwargs):
+        redactor = Redactor.objects.get(id=request.user.id)
+        newspaper = Newspaper.objects.get(id=pk)
+
+        if newspaper in redactor.newspapers.all():
+            redactor.newspapers.remove(newspaper)
+        else:
+            redactor.newspapers.add(newspaper)
+
+        return HttpResponseRedirect(reverse_lazy("newspaper:newspaper-detail", args=[pk]))

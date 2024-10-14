@@ -12,17 +12,16 @@
     </h1>
     <p>Topic: {{newspaper.topic.name}}</p>
 
-    <h1>
-        {% if newspaper in user.newspapers.all %}
-            <a href="{% url 'newspaper:toggle-newspaper-assign' pk=newspaper.id %}" class="btn btn-danger link-to-page">
+    <form action="{% url 'newspaper:toggle-newspaper-assign' pk=newspaper.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn {% if newspaper in user.newspapers.all %}btn-danger{% else %}btn-success{% endif %}">
+            {% if newspaper in user.newspapers.all %}
                 Delete me from this article
-            </a>
-        {% else %}
-            <a href="{% url 'newspaper:toggle-newspaper-assign' pk=newspaper.id %}" class="btn btn-success link-to-page">
-                Assigned for this article
-            </a>
-        {% endif %}
-    </h1>
+            {% else %}
+                Assign me for this article
+            {% endif %}
+        </button>
+    </form>
 
     <hr>
 
