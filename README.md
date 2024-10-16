@@ -1,7 +1,7 @@
 # Newspaper Agency
 
 ### Django project Newspaper Agency
-- Newspaper Agency deployed to Render [Newspaper Agency] (https://)
+- Newspaper Agency deployed to Render [Newspaper Agency] (https://https://newspaperagency-pj5o.onrender.com)
 
 ## Installation
 *Clone project from GitHub*
