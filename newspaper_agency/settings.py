@@ -11,7 +11,13 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 import os
+import dj_database_url
+import dotenv
 from pathlib import Path
+
+dotenv.load_dotenv(".env")
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-@fegzjd&rd0ewx*fcym$=jt&2koz85@ljf6yozk10kk-)3!x_y")
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -81,16 +87,29 @@ WSGI_APPLICATION = "newspaper_agency.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+ "default": dj_database_url.parse(
+ url=os.getenv("DATABASE_URL", ""),
+ conn_max_age=600, conn_health_checks=True
+ )
 }
 
 
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES["default"].update(db_from_env)
+
+DATABASE_URL = "postgresql://postgresdb_owner:3gdvWM2ojEfi@ep-crimson-brook-a2zu6gkz.eu-central-1.aws.neon.tech/postgresdb?sslmode=require"
+
 # db_form_env = dj_database_url.config(conn_max_age=500)
-# DATABASES["default"].update(db_form_env)
+
 
 
 # Password validation
@@ -137,10 +156,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = "staticfiles/"
 
-STATICFILES_DIRS = (BASE_DIR / "static",)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR / "static"),
+]
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # ASSETS_ROOT = "/static/assets"
 
