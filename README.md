@@ -25,9 +25,9 @@ git clone https://github.com/Olga-Gynguliak/NewspaperAgency.git
 
 >*User Authentication:*
 > 
-> Login: admin
+> Login: user
 > 
-> Password: admin1234
+> Password: user12345
 
 *Article Management:*
 Create, edit, and delete articles; Categorize articles by topic; Assign author for article; Count records of newspapers, publishers, topics.
